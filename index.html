@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div id="rating">
+      <div id="starBg">
+        <img id="starIcon" src="/images/icon-star.svg" alt="" width="17" height="16">
+      </div>
+      <p id="highlight">How did we do?</p>
+      <p id="description">Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+      <form action="">
+        <div id="formPropositions">
+          <label for="optionOne">
+            <input type="radio" id="optionOne" name="ratingOption" value="1" onclick="setAnswer(this.value)">
+            <span>1</span>
+          </label>
+          <label for="optionTwo">
+            <input type="radio" id="optionTwo" name="ratingOption" value="2" onclick="setAnswer(this.value)">
+            <span>2</span>
+          </label>
+          <label for="optionThree">
+            <input type="radio" id="optionThree" name="ratingOption" value="3" onclick="setAnswer(this.value)">
+            <span>3</span>
+          </label>
+          <label for="optionFour">
+            <input type="radio" id="optionFour" name="ratingOption" value="4" onclick="setAnswer(this.value)">
+            <span>4</span>
+          </label>
+          <label for="optionFive">
+            <input type="radio" id="optionFive" name="ratingOption" value="5" onclick="setAnswer(this.value)">
+            <span>5</span>
+          </label>
+        </div>
+        <input type="submit" value="submit" id="submitButton" onclick="showThanks()">
+      </form>
+    </div>
+    <div id="thanking">
+      <img src="/images/illustration-thank-you.svg" width="162" height="108" alt="">
+      <p id="rated">You selected <span id="submittedRating">4</span> out of 5</p>
+      <p id="highlight">Thank you!</p>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
