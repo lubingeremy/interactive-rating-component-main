@@ -20,17 +20,17 @@
 <body>
 
   <main>
-    <div id="rating">
+    <div id="rating" class="">
       <div id="starBg">
         <img id="starIcon" src="/images/icon-star.svg" alt="" width="17" height="16">
       </div>
       <p id="highlight">How did we do?</p>
       <p id="description">Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!</p>
-      <form action="">
+      <form action="" id="myForm">
         <div id="formPropositions">
           <label for="optionOne">
-            <input type="radio" id="optionOne" name="ratingOption" value="1" onclick="setAnswer(this.value)">
+            <input type="radio" id="optionOne" name="ratingOption" value="1" onclick="setAnswer(this.value)" required>
             <span>1</span>
           </label>
           <label for="optionTwo">
@@ -50,7 +50,7 @@
             <span>5</span>
           </label>
         </div>
-        <input type="submit" value="submit" id="submitButton" onclick="showThanks()">
+        <input type="submit" value="submit" id="submitButton" >
       </form>
     </div>
     <div id="thanking">
@@ -64,7 +64,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/lubingeremy">Gérémy Lubin</a>.
   </div>
 </body>
 <script src="script.js"></script>
