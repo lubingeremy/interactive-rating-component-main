@@ -4,6 +4,8 @@ const rating = document.getElementById("rating")
 const thanking = document.getElementById("thanking")
 const submit = document.getElementById("submitButton")
 
+// console.log(main)
+
 var answer = 0
 
 var submittedRating = document.getElementById("submittedRating")
@@ -17,6 +19,7 @@ function setAnswer(rating){
 function cardTransition(){
   rating.classList.add("slideOut")
   thanking.classList.add("slideIn")
+  document.getElementById("main").style.height = "25rem"
 }
 
 function showThanks(){

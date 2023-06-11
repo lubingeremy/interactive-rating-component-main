@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; color: white; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  <main>
+  <main id="main">
     <div id="rating" class="">
       <div id="starBg">
         <img id="starIcon" src="/images/icon-star.svg" alt="" width="17" height="16">
@@ -31,26 +31,21 @@
         <div id="formPropositions">
           <label for="optionOne">
             <input type="radio" id="optionOne" name="ratingOption" value="1" onclick="setAnswer(this.value)" required>
-            <span>1</span>
           </label>
           <label for="optionTwo">
             <input type="radio" id="optionTwo" name="ratingOption" value="2" onclick="setAnswer(this.value)">
-            <span>2</span>
           </label>
           <label for="optionThree">
             <input type="radio" id="optionThree" name="ratingOption" value="3" onclick="setAnswer(this.value)">
-            <span>3</span>
           </label>
           <label for="optionFour">
             <input type="radio" id="optionFour" name="ratingOption" value="4" onclick="setAnswer(this.value)">
-            <span>4</span>
           </label>
           <label for="optionFive">
             <input type="radio" id="optionFive" name="ratingOption" value="5" onclick="setAnswer(this.value)">
-            <span>5</span>
           </label>
         </div>
-        <input type="submit" value="submit" id="submitButton" >
+        <input type="submit" value="submit" id="submitButton">
       </form>
     </div>
     <div id="thanking">

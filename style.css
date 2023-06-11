@@ -11,7 +11,6 @@
 	box-sizing: border-box;         /* Opera/IE 8+ */
 
   font-family: 'Overpass', sans-serif;
-
 }
 
 body{
@@ -24,24 +23,26 @@ body{
 }
 
 main{
-  height: 24.5rem;
-  width: 91.5vw;
+  height: 22.5rem;
+  width: 86.5vw;
   background-color: hsl(213, 19%, 18%);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.8rem 1.3rem;
   margin-bottom: 1rem;
   overflow: hidden;
+
 }
 
 #rating{
-  /* width: 20rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.3rem;
 }
 
 #starBg{
@@ -57,12 +58,8 @@ main{
 }
 
 #starIcon{
-  /* height: auto; */
   height: 0.8rem;
   width: auto;
-  /* background-color: hsl(216, 12%, 54%); */
-  
-  /* border: 0.5rem black; */
 }
 
 #highlight{
@@ -74,7 +71,6 @@ main{
 p{
   color: hsl(216, 12%, 54%);
   line-height: 1.5rem;
-  font-weight: bold;
 }
 
 form{
@@ -93,19 +89,22 @@ form{
 input[type="radio"]{
   height: 2.3rem;
   width: 2.3rem;
-  color: red;
-  border-radius: 1rem;
+  color: hsl(217, 12%, 63%);
+  border-radius: 100%;
   background-color: hsla(0, 0%, 100%, 0.03);
 
   cursor: pointer;
 
-  /* border: 2px solid black; */
   -webkit-appearance: none; /*to disable the default appearance of radio button*/
   -moz-appearance: none;
+  transition: 0.2s;
+
 }
 
 input[type="radio"]:hover{
   background-color: hsl(25, 97%, 53%);
+  transition: 0.2s;
+
 }
 
 label input[type="radio"]:hover span{
@@ -118,11 +117,45 @@ label span{
   color: hsl(216, 12%, 54%);
   font-weight: bold;
   cursor: pointer;
-
 }
 
 input[type="radio"]:checked{
-  background-color: red;
+  background-color: hsl(217, 12%, 63%);
+}
+
+input[type="radio"]:before{
+  position: absolute;
+  content: "";
+  font-weight: bold;
+  transform: translate(1rem, 0.65rem);
+}
+
+input[type="radio"]:hover::before, input[type="radio"]:checked::before{
+  color: white;
+}
+
+#optionOne:before{
+  content: "1";
+}
+#optionTwo:before{
+  content: "2";
+  transform: translate(0.9rem, 0.65rem);
+}
+#optionThree:before{
+  content: "3";
+  transform: translate(0.9rem, 0.65rem);
+}
+#optionFour:before{
+  content: "4";
+  transform: translate(0.95rem, 0.65rem);
+}
+#optionFive:before{
+  content: "5";
+  transform: translate(0.89rem, 0.65rem);
+}
+
+#optionThree{
+  background-color: rebeccapurple;
 }
 
 input[type="submit"]{
@@ -137,6 +170,14 @@ input[type="submit"]{
   font-weight: 700;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover{
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+  transition: 0.2s;
 }
 
 #thanking{
@@ -145,6 +186,8 @@ input[type="submit"]{
   opacity: 0;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: red;
   gap: 1.5rem;
 }
 
@@ -166,7 +209,7 @@ main p:last-child{
 }
 
 .slideOut{
-  animation: slideOut 0.8s;
+  animation: slideOut 0.7s;
   animation-fill-mode: forwards;
 }
 
@@ -182,7 +225,7 @@ main p:last-child{
 }
 
 .slideIn{
-  animation: slideIn 1.2s;
+  animation: slideIn 0.9s;
   animation-fill-mode: forwards;
 }
 
