@@ -18,9 +18,18 @@ function setAnswer(rating){
 
 function cardTransition(){
   rating.classList.add("slideOut")
+  setTimeout(function() {
+    rating.style.display = "none"; // Masque la première section après la transition
+  }, 500); 
+  setTimeout(function() {
+    thanking.style.display = "flex"; // Affiche la deuxième section
+  }, 600); 
+  setTimeout(function() {
+    thanking.classList.add("slideIn")
+  }, 700); 
+  
   // rating.style.display = "none"
-  thanking.style.display = "flex"
-  thanking.classList.add("slideIn")
+  // thanking.classList.add("slideIn")
   // document.getElementById("main").style.height = "25rem"
 }
 

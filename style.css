@@ -154,10 +154,6 @@ input[type="radio"]:hover::before, input[type="radio"]:checked::before{
   transform: translate(0.89rem, 0.65rem);
 }
 
-#optionThree{
-  background-color: rebeccapurple;
-}
-
 input[type="submit"]{
   height: 2.5rem;
   width: 100%;
@@ -182,12 +178,19 @@ input[type="submit"]:hover{
 
 #thanking{
   display: none;
-  height: 0;
+  transform: translateX(+100%); /* Fait glisser la section vers la gauche */
   opacity: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+}
+
+#rating{
+  transition: all 0.5s ease; /* Ajoute une transition fluide */
+}
+#thanking {
+  transition: all 0.5s ease; /* Ajoute une transition fluide */
 }
 
 #rated{
@@ -207,44 +210,12 @@ main p:last-child{
   }
 }
 
-.slideOut{
-  animation: slideOut 0.7s;
-  animation-fill-mode: forwards;
+#rating.slideOut{
+  transform: translateX(-100%); /* Fait glisser la section vers la gauche */
+  opacity: 0;
 }
 
-@keyframes slideOut {
-  from {
-    visibility: visible;
-    /* display: flex; */
-    /* height: 100%; */
-    /* opacity: 1; */
-    transform: translateX(0);
-  }
-  to {
-    visibility: hidden;
-    background-color: red;
-    /* opacity: 0; */
-    transform: translateX(-110%);
-  }
-}
-/* @keyframes slideOut {
-  from {transform: translateX(0);}
-  50% {opacity: 0;transform: translateX(-110%)}
-  75% {height: 100%; opacity: 0;}
-  to {
-    height: 0;
-    transform: translateX(-110%);
-    opacity: 0;
-  }
-} */
-
-.slideIn{
-  animation: slideIn 0.9s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slideIn {
-  from {}
-  80% {height: 100%; opacity: 0;}
-  to {opacity: 1; height: 100%;}
+#thanking.slideIn{
+  transform: translateX(0); /* Fait glisser la section vers la gauche */
+  opacity: 1;
 }
