@@ -18,8 +18,10 @@ function setAnswer(rating){
 
 function cardTransition(){
   rating.classList.add("slideOut")
+  // rating.style.display = "none"
+  thanking.style.display = "flex"
   thanking.classList.add("slideIn")
-  document.getElementById("main").style.height = "25rem"
+  // document.getElementById("main").style.height = "25rem"
 }
 
 function showThanks(){

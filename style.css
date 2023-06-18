@@ -181,13 +181,12 @@ input[type="submit"]:hover{
 }
 
 #thanking{
-  display: flex;
+  display: none;
   height: 0;
   opacity: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: red;
   gap: 1.5rem;
 }
 
@@ -214,6 +213,21 @@ main p:last-child{
 }
 
 @keyframes slideOut {
+  from {
+    visibility: visible;
+    /* display: flex; */
+    /* height: 100%; */
+    /* opacity: 1; */
+    transform: translateX(0);
+  }
+  to {
+    visibility: hidden;
+    background-color: red;
+    /* opacity: 0; */
+    transform: translateX(-110%);
+  }
+}
+/* @keyframes slideOut {
   from {transform: translateX(0);}
   50% {opacity: 0;transform: translateX(-110%)}
   75% {height: 100%; opacity: 0;}
@@ -222,7 +236,7 @@ main p:last-child{
     transform: translateX(-110%);
     opacity: 0;
   }
-}
+} */
 
 .slideIn{
   animation: slideIn 0.9s;
